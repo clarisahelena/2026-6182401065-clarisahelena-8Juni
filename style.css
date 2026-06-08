@@ -1,15 +1,15 @@
+html,
 body {
-  cursor: default;
-  padding: 0;
-  border: 0;
   margin: 0;
-
+  padding: 0;
+  background: #d9d9d9;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  background-color: white;
-  font-family: Helvetica, Verdana, Arial, sans-serif;
 }
 
-body, canvas, div {
+body,
+canvas,
+div {
   outline: none;
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -18,34 +18,40 @@ body, canvas, div {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-/* Remove spin of input type number */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-  -webkit-appearance: none;
-  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
-}
-
-canvas {
-  background-color: rgba(0, 0, 0, 0);
+.header {
+  margin: 16px 0 10px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #000;
 }
 
 #GameDiv {
-    margin: 0 auto;
-    position:relative;
-    border:5px solid black;
-    border-radius: 10px;
-    box-shadow: 0 5px 50px #333
+  position: relative;
+  margin: 0 auto;
+  border: 6px solid #000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+  background: #000;
 }
 
-#Cocos3dGameContainer, #GameCanvas {
+#Cocos3dGameContainer {
   width: 100%;
   height: 100%;
 }
 
-:root {
-  --safe-top: env(safe-area-inset-top);
-  --safe-right: env(safe-area-inset-right);
-  --safe-bottom: env(safe-area-inset-bottom);
-  --safe-left: env(safe-area-inset-left);
+#GameCanvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #5a2ca0;
+  text-decoration: underline;
 }
